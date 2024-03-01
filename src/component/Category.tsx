@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Side from "../assets/Side";
-import { MenuInterface, data } from "../utils/Data";
+import { MenuInterface, SubMenuInterface, data } from "../utils/Data";
 import { useSelector } from "react-redux";
 import { MenuState } from "../utils/redux/menu";
 import { RootState } from "../utils/redux/store";
@@ -9,37 +9,39 @@ export default function Category() {
   const categories = useSelector((state: RootState) =>
     state.menu.menustate.map((e: { category: string }) => e.category)
   );
-  const [show, setShow] = React.useState(categories);
+  const submenu = useSelector(
+    (state: RootState) => state.menu.selectedCat.submenus
+  );
+  const [show, setShow] = React.useState<SubMenuInterface[]>([]);
   useEffect(() => {
-    console.log(categories);
-  }, []);
+    if (submenu !== undefined) setShow(submenu);
+    console.log(show);
+  }, [submenu]);
   return (
-    <div className="absolute justify-center flex items-center w-full">
-      <Side className="absolute cursor-pointer" category={show} />
+    <div className="absolute justify-center flex items-center ">
+      <Side className="absolute cursor-pointer" submenu={show} />
       {show.map((item, index) => (
         <div
           style={{
             transform: `${
               index % 2
                 ? index > 2
-                  ? "translateX(120px)"
-                  : "translateX(-120px)"
+                  ? "translateX(100px)"
+                  : "translateX(-100px)"
                 : index === 0
-                ? "translateY(120px)"
-                : "translateY(-120px)"
-            } rotate(${index !== show.length - 1 ? index * 90 : 270}deg)`,
+                ? "translateY(100px)"
+                : "translateY(-100px)"
+            } rotate(${index * 90}deg)`,
           }}
-          className="w-full absolute origin-bottom items-center flex justify-center"
+          className="absolute origin-bottom items-center flex justify-center w-full"
         >
           <h2
             style={{
-              transform: `rotate(${
-                index !== show.length - 1 ? -index * 90 : -270
-              }deg)`,
+              transform: `rotate(${-index * 90}deg)`,
             }}
             className="absolute top-20 text-base font-semibold w-fit"
           >
-            {item}
+            {item.submenu}
           </h2>
         </div>
       ))}

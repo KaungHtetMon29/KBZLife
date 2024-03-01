@@ -117,25 +117,25 @@ export const data = {
             },
           ],
         },
-        // {
-        //   submenu: "extra cheese sausage",
-        //   itemmenu: [
-        //     {
-        //       item: "cheesy sausage bites",
-        //       detail: [
-        //         {
-        //           name: "medium aloha",
-        //         },
-        //         {
-        //           name: "medium chicken caldo",
-        //         },
-        //         {
-        //           name: "medium double cheese",
-        //         },
-        //       ],
-        //     },
-        //   ],
-        // },
+        {
+          submenu: "extra cheese sausage",
+          itemmenu: [
+            {
+              item: "cheesy sausage bites",
+              detail: [
+                {
+                  name: "medium aloha",
+                },
+                {
+                  name: "medium chicken caldo",
+                },
+                {
+                  name: "medium double cheese",
+                },
+              ],
+            },
+          ],
+        },
         {
           submenu: "cheese crust sausage",
           itemmenu: [

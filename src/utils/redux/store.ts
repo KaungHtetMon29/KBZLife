@@ -6,5 +6,11 @@ export const store = configureStore({
   reducer: { menu: MenuSlice.reducer },
 });
 export type RootState = {
-  menu: { selectedCat: MenuInterface; menustate: MenuInterface[] };
+  menu: {
+    selectedCat: MenuInterface;
+    menustate: MenuInterface[];
+    selectedSub: SubMenuInterface;
+    show: boolean;
+    selectedItem: SubMenuInterface;
+  };
 };
