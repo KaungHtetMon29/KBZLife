@@ -27,6 +27,7 @@ const MenuSlice = createSlice({
     },
     selectsub(state, action) {
       state.selectedItem = action.payload;
+      state.selectedSubItem = "";
     },
     selectsubitem(state, action) {
       state.selectedSubItem = action.payload;
