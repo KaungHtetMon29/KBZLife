@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import Side from "../assets/Side";
-import { MenuInterface, SubMenuInterface, data } from "../utils/Data";
+import { SubMenuInterface } from "../utils/Data";
 import { useSelector } from "react-redux";
-import { MenuState } from "../utils/redux/menu";
+
 import { RootState } from "../utils/redux/store";
 import { useTransition, a } from "react-spring";
 
@@ -16,8 +16,8 @@ export default function Category() {
     if (submenu !== undefined) {
       setShow(submenu);
     }
-    console.log(show);
   }, [submenu]);
+
   return (
     <div className="absolute justify-center flex items-center ">
       <Side className="absolute cursor-pointer" submenu={show} />

@@ -11,7 +11,7 @@ export default function Moodle() {
   return (
     <div className="absolute z-[999] w-72 h-72 bg-white p-8 rounded-full shadow-lg border-8 border-[#00A1DD] flex items-center justify-center flex-col gap-8">
       {categories.map((item, index) => (
-        <Items item={item} />
+        <Items item={item} key={index} />
       ))}
     </div>
   );

@@ -1,28 +1,20 @@
-import React, { SetStateAction, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import SideBig from "../assets/SideBig";
 import { useSelector } from "react-redux";
 import { RootState } from "../utils/redux/store";
-import {
-  ItemMenuInterface,
-  MenuInterface,
-  SubMenuInterface,
-} from "../utils/Data";
-import { Dispatch } from "@reduxjs/toolkit";
+import { SubMenuInterface } from "../utils/Data";
+
 import { useTransition, a } from "react-spring";
 
 export default function Submenu() {
-  let test: any = [];
   const subitem = useSelector((state: RootState) => state.menu.selectedSubItem);
   const show = useSelector((state: RootState) => state.menu.selectedItem);
 
   const [HoverItem, setHoveredItem] = useState(null);
 
-  useEffect(() => {
-    console.log(show);
-  }, [HoverItem]);
   return (
     <div className="absolute items-center flex justify-center group">
-      {show.itemmenu !== null && show.itemmenu !== undefined && (
+      {show.itemmenu && (
         <SideBig item={show.itemmenu} HoverItem={setHoveredItem} />
       )}
       <Label show={show} subitem={subitem} HoverItem={HoverItem} />
