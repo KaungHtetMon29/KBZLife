@@ -6,6 +6,7 @@ const MenuState = {
   selectedCat: {},
   show: false,
   selectedItem: {},
+  selectedSubItem: "",
 };
 const MenuSlice = createSlice({
   name: "menu",
@@ -16,6 +17,7 @@ const MenuSlice = createSlice({
         (e) => e.category === action.payload.category
       )[0];
       state.selectedItem = {};
+      state.selectedSubItem = "";
     },
     cancel(state) {
       state.selectedCat = {};
@@ -26,6 +28,9 @@ const MenuSlice = createSlice({
     selectsub(state, action) {
       console.log(action.payload);
       state.selectedItem = action.payload;
+    },
+    selectsubitem(state, action) {
+      state.selectedSubItem = action.payload;
     },
   },
 });

@@ -10,6 +10,7 @@ export type RootState = {
     selectedCat: MenuInterface;
     menustate: MenuInterface[];
     selectedSub: SubMenuInterface;
+    selectedSubItem: string;
     show: boolean;
     selectedItem: SubMenuInterface;
   };
