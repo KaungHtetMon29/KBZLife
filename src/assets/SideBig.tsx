@@ -1,7 +1,7 @@
 import React from "react";
-import { SubMenuInterface } from "../utils/Data";
+import { ItemMenuInterface, SubMenuInterface } from "../utils/Data";
 
-export default function SideBig({ item = [] }: { item: SubMenuInterface[] }) {
+export default function SideBig({ item = [] }: { item: ItemMenuInterface[] }) {
   return (
     <svg
       width="790"

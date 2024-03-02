@@ -15,6 +15,7 @@ const MenuSlice = createSlice({
       state.selectedCat = state.menustate.filter(
         (e) => e.category === action.payload.category
       )[0];
+      state.selectedItem = {};
     },
     cancel(state) {
       state.selectedCat = {};

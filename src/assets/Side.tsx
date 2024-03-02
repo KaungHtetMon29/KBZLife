@@ -34,7 +34,7 @@ export default function Side({
                   <path d="M472.635 81.545C420.773 29.6833 350.434 0.547723 277.09 0.547607C203.747 0.547487 133.407 29.6829 81.5455 81.5444L277.09 277.09L472.635 81.545Z" />
                 </mask>
                 <path
-                  className={`hover:fill-red-700 ${
+                  className={`hover:fill-[#00A1DD] ${
                     show &&
                     show.submenu === submenu[2].submenu &&
                     "fill-[#3ac8fc]"

@@ -90,20 +90,20 @@ export const data = {
                 },
               ],
             },
-            {
-              item: "delux",
-              detail: [
-                {
-                  name: "hawaiian",
-                },
-                {
-                  name: "italian sausage",
-                },
-                {
-                  name: "meat deluxe",
-                },
-              ],
-            },
+            // {
+            //   item: "delux",
+            //   detail: [
+            //     {
+            //       name: "hawaiian",
+            //     },
+            //     {
+            //       name: "italian sausage",
+            //     },
+            //     {
+            //       name: "meat deluxe",
+            //     },
+            //   ],
+            // },
             {
               item: "seafood",
               detail: [
