@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import CenterCircle from "./assets/Center";
-import { Test } from "./component/test";
 import Side from "./assets/Side";
 import SideBig from "./assets/SideBig";
 import Menu from "./component/Menu";
