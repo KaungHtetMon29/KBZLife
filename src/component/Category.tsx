@@ -19,7 +19,7 @@ export default function Category() {
   }, [submenu]);
 
   return (
-    <div className="absolute justify-center flex items-center ">
+    <div className="absolute justify-center flex items-center">
       <Side className="absolute cursor-pointer" submenu={show} />
       <Label show={show} />
     </div>
@@ -51,13 +51,14 @@ const Label = ({ show }: { show: SubMenuInterface[] }) => {
                 : "translateY(-100px)"
             } rotate(${index * 90}deg)`,
           }}
-          className="absolute origin-bottom items-center flex justify-center w-full"
+          className="absolute origin-bottom items-center flex justify-center"
         >
           <h2
             style={{
+              textAlign: "center",
               transform: `rotate(${-index * 90}deg)`,
             }}
-            className="absolute top-20 text-base font-semibold w-fit"
+            className="absolute top-20 text-base font-semibold "
           >
             {item.submenu}
           </h2>

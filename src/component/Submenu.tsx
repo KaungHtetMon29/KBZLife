@@ -46,14 +46,14 @@ const Label = ({
         transition((style, item, _, index) => (
           <a.div
             style={{ ...style, transform: `rotate(${rotation[index]}deg)` }}
-            className={`absolute origin-bottom w-fit `}
+            className={`absolute origin-bottom w-full`}
           >
             <div
-              className={`absolute transform origin-bottom items-center flex justify-center translate-x-[320px] w-fit`}
+              className={`absolute transform origin-bottom items-center flex justify-center translate-x-[320px] w-full`}
             >
               {item && (
                 <h2
-                  className={`absolute ${
+                  className={`absolute w-full ${
                     subitem === item?.item ? "text-[#005F9A]" : "text-black"
                   } text-base font-semibold w-fit rotate-[270deg] transform scale-x-[1] text-center ${
                     HoverItem === index ? "text-white" : "text-black"
