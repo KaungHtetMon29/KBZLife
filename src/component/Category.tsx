@@ -58,7 +58,7 @@ const Label = ({ show }: { show: SubMenuInterface[] }) => {
               textAlign: "center",
               transform: `rotate(${-index * 90}deg)`,
             }}
-            className="absolute top-20 text-base font-semibold "
+            className="absolute top-20 text-base font-semibold cursor-default"
           >
             {item.submenu}
           </h2>

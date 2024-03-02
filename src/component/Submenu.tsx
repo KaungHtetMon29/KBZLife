@@ -53,7 +53,7 @@ const Label = ({
             >
               {item && (
                 <h2
-                  className={`absolute w-full ${
+                  className={`absolute w-full cursor-default ${
                     subitem === item?.item ? "text-[#005F9A]" : "text-black"
                   } text-base font-semibold w-fit rotate-[270deg] transform scale-x-[1] text-center ${
                     HoverItem === index ? "text-white" : "text-black"
