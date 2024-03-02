@@ -8,6 +8,7 @@ export default function Menu() {
   const dispatch = useDispatch();
   const cat = useSelector((state: RootState) => state.menu.selectedCat);
   const [selected, setselected] = useState("Menu");
+
   useEffect(() => {
     if (Object.keys(cat).length !== 0) {
       setselected(cat.category);
@@ -15,7 +16,7 @@ export default function Menu() {
   }, [cat]);
   return (
     <div
-      className="absolute z-50 justify-center items-center flex "
+      className="absolute z-50 justify-center items-center flex transform  hover:scale-110 origin-center"
       onClick={() => dispatch(MenuActions.menuswitch())}
     >
       <div className="absolute cursor-pointer">

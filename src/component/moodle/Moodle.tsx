@@ -21,7 +21,7 @@ export function Items({ item }: { item: string }) {
   const dispatch = useDispatch();
   return (
     <div
-      className="text-lg font-semibold"
+      className="text-lg font-semibold cursor-pointer"
       onClick={() => {
         dispatch(MenuActions.selectCat({ category: item }));
         dispatch(MenuActions.menuswitch());
