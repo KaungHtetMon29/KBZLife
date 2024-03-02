@@ -46,7 +46,7 @@ const Label = ({
         transition((style, item, _, index) => (
           <a.div
             style={{ ...style, transform: `rotate(${rotation[index]}deg)` }}
-            className={`absolute origin-bottom `}
+            className={`absolute origin-bottom w-1/4`}
           >
             <div
               className={`absolute transform origin-bottom items-center flex justify-center translate-x-[320px] w-full`}
